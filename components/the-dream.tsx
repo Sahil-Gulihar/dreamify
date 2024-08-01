@@ -57,10 +57,10 @@ export function TheDream() {
         <div className="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900">
           <div className="grid gap-4">
             <div className="grid gap-2">
-              <h3 className="text-2xl ">
+              <h3 className="text-2xl font-dosis font-normal text-[200,800]">
                 <input
                   placeholder="Your dream in short"
-                  className="text-gray-200 placeholder:text-zinc-400 placeholder:font-semibold from-accent-foreground font-poppins text-3xl  bg-transparent border-none w-full outline-none py-2"
+                  className="text-gray-200 placeholder:text-zinc-400 placeholder:font-semibold    from-accent-foreground  text-3xl  bg-transparent border-none w-full outline-none py-2"
                 />
               </h3>
               <div className="absolute right-2 top-2 h-10 w-10">
@@ -69,7 +69,7 @@ export function TheDream() {
                 </Link>
               </div>
 
-              <div className="text-muted-foreground font-MyFont text-2xl">
+              <div className="text-muted-foreground font-serif  text-2xl">
                 <textarea
                   placeholder="Elaborate your Dream..."
                   className="text-gray-200 placeholder:text-gray-600 placeholder:font-serif bg-transparent border-none w-full outline-none py-2 h-24"

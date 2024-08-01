@@ -18,6 +18,10 @@ const config = {
       },
     },
     extend: {
+      fontWeight: {
+        '200': '200',
+        '800': '800',
+      },
       fontFamily: {
         // 'sans': ['ui-sans-serif', 'system-ui'],
       'serif': ['ui-serif', 'Georgia'],
