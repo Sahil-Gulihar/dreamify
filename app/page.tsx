@@ -2,13 +2,12 @@
 import { useState, useRef, useEffect } from "react";
 import { TheDream } from "@/components/the-dream";
 import { Button } from "@/components/ui/button";
-import html2canvas from 'html2canvas';
+import html2canvas from "html2canvas";
 import {
   exportComponentAsJPEG,
   exportComponentAsPDF,
   exportComponentAsPNG,
 } from "react-component-export-image";
-
 
 export default function Home() {
   const componentRef = useRef<HTMLDivElement>(null);
@@ -62,28 +61,32 @@ export default function Home() {
   };
 
   return (
-    <div
-      className="relative min-h-screen text-white flex justify-center items-center bg-cover bg-center"
-      style={{ backgroundImage: "url('https://images.pexels.com/photos/4256852/pexels-photo-4256852.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')" }}
-      ref={componentRef}
-    >
+    <div  ref={componentRef}>
+      <div
+        className="relative min-h-screen text-white flex justify-center items-center bg-cover bg-center"
+        style={{
+          backgroundImage:
+            "url('https://images.pexels.com/photos/4256852/pexels-photo-4256852.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')",
+        }}
+       
+      >
+        <div className="absolute inset-0 bg-black opacity-50"></div>
 
-      <div className="absolute inset-0 bg-black opacity-50"></div>
-
-      <div className="relative z-10 p-4">
-        <TheDream />
-        {!isExporting && (
-          <Button
-            variant="outline"
-            className={`w-full mt-4 bg-transparent hover:bg-neutral-900 border-none text-transparent hover:text-white transition-all duration-300 ${
-              isShareIconHovering ? 'bg-neutral-900 text-white' : ''
-            }`}
-            onClick={handleExport}
-          >
-            <ShareIcon className="mr-2 h-4 w-4 font-MyFont" />
-            Export
-          </Button>
-        )}
+        <div className="relative z-10 p-4">
+          <TheDream />
+          {!isExporting && (
+            <Button
+              variant="outline"
+              className={`w-full mt-4 bg-transparent hover:bg-neutral-900 border-none text-transparent hover:text-white transition-all duration-300 ${
+                isShareIconHovering ? "bg-neutral-900 text-white" : ""
+              }`}
+              onClick={handleExport}
+            >
+              <ShareIcon className="mr-2 h-4 w-4 font-MyFont" />
+              Export
+            </Button>
+          )}
+        </div>
       </div>
     </div>
   );
